@@ -1,0 +1,36 @@
+body {
+    background-color: #333333;
+  }
+  .p{
+      font-size: 14px;
+      color: white;
+  }
+  .red{
+    height: 100px;
+    width: 100px;
+    background-color: #ff0000;
+  }
+
+  .blue{
+    height: 100px;
+    width: 100px;
+    background-color: #0080ff;
+  }
+
+  .yellow{
+    height: 100px;
+    width: 100px;
+    background-color: #fff700;
+  }
+
+  .orange{
+    height: 100px;
+    width: 100px;
+    background-color: #ff9900;
+  }
+
+  .purple{
+    height: 100px;
+    width: 100px;
+    background-color: #ae00ff;
+  }
