@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DoDateDisplay</title>
 </head>
 <body>
-    
+    <script> 
+        var i = new Date();
+        var ii = new Date();
+        var iii = new Date();
+        
+        function toonDatum(){
+            document.getElementById("dag").innerHTML = i.getDate();
+            document.getElementById("maand").innerHTML = ii.getMonth();
+            document.getElementById("jaar").innerHTML = iii.getFullYear();
+        }
+        window.addEventListener('DOMContentLoaded', toonDatum);
+    </script>
+
+    <div id="dag">
+        
+    </div>
+    <div id="maand">
+
+    </div>
+    <div id="jaar">
+
+    </div>
 </body>
 </html>
