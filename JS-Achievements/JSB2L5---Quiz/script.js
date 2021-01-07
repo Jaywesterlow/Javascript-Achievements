@@ -10,13 +10,23 @@ let counter = 0; // aantal mutliple choice vragen
 let quiz; // object met quiz vragen
 let playerData = {}; // object, hierin worden de game gegevens opgeslagen
 
+let quizNummer = 0;
+
 function init(){
-    quiz = quiz1; // kies de quiz
-    //quiz = quiz2; // kies de quiz
+    quizNummer += 1;
+    if(quizNummer == 1){
+      quiz = quiz1; // kies de quiz
+    }
+    if(quizNummer == 2){
+      quiz = quiz2; // kies de quiz
+    }
     initQuiz(); // start de quiz
 }
 
 function initQuiz(){
+  questionBox.style.display = "block"; // reset alle player game variabelen
+  resultBox.style.display = "none"; // reset alle player game variabelen
+  counter = 0; // reset alle player game variabelen
   playerData.goodAnswers = 0; // reset alle player game variabelen
   playerData.wrongAnswers = 0; // reset alle player game variabelen
   playerName = ""; // toekomstige uitbreiding naam speler opvragen
@@ -79,9 +89,12 @@ function finishQuiz() {
   questionBox.style.display = "none";
   resultBox.style.display = "block";
   quizWrapper.style.background = " rgb(5, 10, 41)";
-  resultBox.innerHTML = '<div class="finishIMG"><h2 style = "color: white;"> Dit is jouw kunstwerk! Wil je het kunstwerk in het echt zien, kom dan naar het LAM! </h2> <img src= "artwork.JPG" class="finishIMG" alt="tekening van water"/></div>';
-
-
+  if(quizNummer == 2){
+    resultBox.innerHTML = "<h2>Jouw resultaat <br>goede antwoorden " + playerData.goodAnswers + "<br>foute antwoorden " + playerData.wrongAnswers + "</h2>";
+  }
+  else {
+    init()
+  }
 }
 
-init(); // start it
+init();
