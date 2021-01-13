@@ -6,4 +6,4 @@
 
 
 
-[LINK](http://32333.hosts1.ma-cloud.nl/Javascript/index.html)
+[LINK](http://32333.hosts1.ma-cloud.nl/Javascript/)
